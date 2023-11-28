@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+    background-color: black;
+    color: antiquewhite;
+}
+
+form {
+    border: 1px solid black;
+    padding: 1% 4% 4% 4%;
+    background-color: antiquewhite;
+    color: black;
+    border-radius: 24px;
+}
+
+.data_cols {
+    background-color: antiquewhite;
+    color: black;
+    padding: 2%;
+    background-color: antiquewhite;
+    border-radius: 24px;
+}

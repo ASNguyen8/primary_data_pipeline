@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class='data_cols'>
+        <h2>Data columns</h2>
+        <form action='/' method='post'>
+            <input type="hidden" name="path" value="{{ params['path'] }}">
+            <input type="hidden" name="sep" value="{{ params['sep'] }}">
+            {{ columns|safe }}
+        </form>
+    </div>
+    <br>
+    <a href="/cancel"><button> Home page </button></a>
+</body>
+</html>

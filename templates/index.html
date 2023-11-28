@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Pipeline</title>
+</head>
+
+<body>
+
+    <h1>Load your csv file here</h1>
+
+    <form action="/columns", method="post" enctype="multipart/form-data">
+        <h2>From local :</h2>
+        <br>
+        <input type="file" name = "file" accept=".csv" required>
+        <br><br>
+        <label for="csv_sep">CSV separator : </label>
+        <input type="text" name="csv_sep" required>
+        <br><br>
+        <input type="submit" value="Send">
+    </form>
+
+    <br>
+    {{ columns|safe }}
+    <br>
+
+    <h1>Or give its online path</h1>
+
+    <form action="/columns" method="post">
+        <h2>With an absolute path :</h2>
+        <br>
+        <label for="csv_path">CSV absolute path : </label>
+        <input type="text" name="csv_path" required>
+        <br><br>
+        <label for="csv_sep">CSV separator : </label>
+        <input type="text" name="csv_sep" required>
+        <br><br>
+        <input type="submit" value="Send">
+    </form>
+
+</body>
+</html>
